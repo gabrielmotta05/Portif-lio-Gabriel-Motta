@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(foto\ site.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header {
+    background-color: rgba(165, 42, 42, 0.589);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
+h2{ color: white;
+    
+
+}
+p{ color: white;
+
+}
+footer{ font-family: 'Times New Roman', Times, serif;
+
+    
+}
+article{
+    width: 700px;
+
+
+
+}
+section{
+width: 700px;
+
+
+}
