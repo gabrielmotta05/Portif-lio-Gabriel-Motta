@@ -1,46 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Gabriel Motta</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio de Gabriel Motta</title>
+        <link rel="stylesheet" href="estilo.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    
 <body>
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.querySelector(".clapper-animation").style.display = "none";
+            }, 2000); // Remove a claquete após 2 segundos
+        };
+    </script>
+    
+    
+    <div class="clapper-animation">
+        <div class="clapper">
+            <div class="clapper-top"></div>
+            <div class="clapper-bottom"></div>
+            <div class="clapper-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
     <header>
         <h1>Gabriel Motta</h1>
-        <p>Explorando o mundo do cinema e audiovisual</p>
+        <p></p>
     </header>
 
     <main>
         <section class="about">
             <h2>Sobre Mim</h2>
-            <p>Olá! Eu sou Gabriel, um jovem de 18 anos do Rio de Janeiro, atualmente em Portugal, onde estou perseguindo meu sonho de trabalhar com audiovisual. Desde cedo, a paixão pelo cinema me motiva a ultrapassar barreiras e buscar novas oportunidades.</p>
+            <p>Olá! Eu sou Gabriel, um jovem de 19 anos do Rio de Janeiro, atualmente em Portugal, onde estou perseguindo meu sonho de trabalhar com audiovisual. Desde cedo, a paixão pelo cinema me motiva a ultrapassar barreiras e buscar novas oportunidades.</p>
+        </section>
+
+        <section class="skills">
+            <h2><i class="fas fa-tools"></i> Minhas Habilidades</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <i class="fas fa-camera-retro"></i>
+                    <p>Direção de Fotografia</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-edit"></i>
+                    <p>Edição de Vídeo</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Roteirização</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-project-diagram"></i>
+                    <p>Gestão de Projetos</p>
+                </div>
+            </div>
         </section>
 
         <section class="projects">
-            <h2>Projetos Recentes</h2>
-            <div class="project-card">
-                <div class="project-icon">🎬</div> <!-- Ícone de claquete -->
-                <h3>Curta Metragem Pelo Governo Do Rio De Janeiro</h3>
-                <p>Parte de um projeto social do governo brasileiro, tive o prazer de ser um dos diretores de fotografia do filme "Tresnoitar" que foi exibido na Universidade Federal Rural do Rio de Janeiro.</p>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">📹</div> <!-- Ícone de câmera de vídeo -->
-                <h3>Curta Metragem Acadêmico</h3>
-                <p>Além do trabalho como diretor de fotografia, ainda no ensino médio, tive a oportunidade de dirigir curtas metragens em prol de trabalhos acadêmicos </p>
+            <h2>Projetos</h2>
+            <div class="portfolio-grid">
+                <!-- Projeto Tresnoitar -->
+                <div class="portfolio-item">
+                    <img src="poster-tresnoitar.jpg" alt="Pôster do Filme Tresnoitar" class="project-poster">
+                    <h3>Tresnoitar</h3>
+                    <p>Parte de um projeto social do governo brasileiro, tive o prazer de ser um dos diretores de fotografia deste curta-metragem exibido na Universidade Federal Rural do Rio de Janeiro.</p>
+                    <a href="https://youtu.be/RZe_7TFTSHQ?si=LOtLPSOJHr7LqL3k" target="_blank" class="btn">Assistir ao filme</a>
+                </div>
+        
+                <!-- Projeto Curta Acadêmico -->
+                <div class="portfolio-item small">
+                    <h3>Curta Acadêmico</h3>
+                    <p>Além do trabalho como diretor de fotografia, ainda no ensino médio, tive a oportunidade de dirigir curtas-metragens para projetos acadêmicos.</p>
+                </div>
             </div>
         </section>
-
+        
+        
+        
         <section class="contact">
             <h2>Contato</h2>
             <p>Interessado em colaborar ou saber mais? Fique à vontade para entrar em contato!</p>
-            <p>Email: gabriel959ymail2220@gmail.com</p>
+            <div class="contact-details">
+                <!-- Email -->
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>gabriel959ymail2220@gmail.com</span>
+                </div>
+                
+                <!-- Telefone -->
+                <div class="contact-item">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <span>+351 962 374 348</span>
+                </div>
+                
+                <!-- Instagram -->
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/mottxsz/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram contact-icon"></i>
+                        <span>@mottxsz</span>
+                    </a>
+                </div>
+            </div>
         </section>
+        
+        
     </main>
 
     <footer>
         <p>&copy; 2024 Gabriel Motta - Todos os direitos reservados</p>
     </footer>
-</body>
+   
 </html>

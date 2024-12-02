@@ -1,8 +1,7 @@
-/* Estilo básico */
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #333;
+    background: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,19 +11,17 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #a52a2a;
-    color: white;
+    background-color: #fff;
+    color: #000;
     text-align: center;
     padding: 20px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 0;
-   
 }
 
 header p {
@@ -41,88 +38,505 @@ main {
     gap: 20px;
 }
 
-.about, .projects, .contact {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.about, .skills, .projects, .contact, .cta {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.about h2, .projects h2, .contact h2 {
-    color: #a52a2a;
-    border-bottom: 2px solid #a52a2a;
+.about h2, .skills h2, .projects h2, .contact h2, .cta h2 {
+    color: #fff;
+    border-bottom: 2px solid #fff;
     padding-bottom: 10px;
     margin: 0;
 }
 
-/* Flexbox para Cartões de Projetos */
-.projects {
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #000;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.skill i {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+/* Projetos */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #000;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: #fff;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Call to Action */
+.cta {
+    background: linear-gradient(to right, #333, #555);
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f5f5f5;
+}
+.portfolio-item img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e63946;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item .btn:hover {
+    background-color: #d62828;
+}
+
+.project-poster {
+    width: 100%;
+    max-width: 300px; /* Controla o tamanho do pôster */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo dos botões */
+.portfolio-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e63946;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item .btn:hover {
+    background-color: #d62828;
+}
+
+
+.portfolio-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio-item {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px; 
+    background-color: #121212; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.portfolio-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+
+.portfolio-item .btn {
+    display: none; 
+}
+
+
+.project-poster {
+    width: 100%;
+    max-width: 250px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Layout da grid dos projetos */
+.portfolio-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.project-card {
+/* Estilização geral dos projetos */
+.portfolio-item {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Estilo do título e parágrafo */
+.portfolio-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Botão para assistir ao filme */
+.portfolio-item .btn {
+    display: inline-block;
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item .btn:hover {
+    background-color: #b20710;
+}
+
+/* Estilo específico para a seção do "Curta Acadêmico" */
+.portfolio-item.small {
+    max-width: 80%; 
+    margin: 0 auto; /* Centralizando */
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+
+.project-poster {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Estilização Geral da Seção de Contato */
+.contact {
+    text-align: center;
+    padding: 30px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Títulos */
+.contact h2 {
+    font-size: 2em;
+    color: #e50914;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e50914;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Detalhes de Contato */
+.contact-details {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
-    background-color: #fafafa;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-.project-icon {
-    font-size: 3em;
-    color: #a52a2a;
+/* Itens de Contato */
+.contact-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: #f5f5f5;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    font-size: 1.2em;
 }
 
-.project-card h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin: 0;
+/* Ícones */
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
-.project-card p {
-    margin: 5px 0;
-}
-
-/* Seção de contato */
-.contact p {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
+/* Link do Instagram */
+.social-link {
+    text-decoration: none;
     color: white;
-    width: 100%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
+.social-link:hover {
+    color: #e50914;
+}
+/* Itens de Contato */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    color: white;
+}
 
-    .project-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+
+.contact-icon {
+    font-size: 1.5em;
+    color: #e50914;
+}
+
+/* Link do Instagram */
+.social-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #e50914;
+}
+
+/* Estilos para a animação da claquete */
+.clapper-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 0.8s ease 1.6s forwards; 
+}
+
+
+.clapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* Parte superior da claquete */
+.clapper-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    background: black; /* Preto para a parte superior */
+    border: 4px solid white;
+    border-bottom: none;
+    transform-origin: bottom;
+    animation: clap 0.3s ease-out 2 alternate; /* Movimento */
+}
+
+/* Listras diagonais na parte superior */
+.clapper-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    background: repeating-linear-gradient(
+        135deg,
+        white,
+        white 10px,
+        black 10px,
+        black 20px
+    );
+}
+
+/* Parte inferior da claquete */
+.clapper-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+    background: #333333; 
+    border: 4px solid white;
+    border-top: none;
+}
+
+/* Linhas brancas no corpo da claquete */
+.clapper-lines {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.clapper-lines .line {
+    height: 2px;
+    width: 100%;
+    background: white;
+}
+
+/* Animações */
+@keyframes clap {
+    0% {
+        transform: rotate(0deg);
     }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Estilização Geral da Seção de Contato */
+.contact {
+    text-align: center;
+    padding: 30px;
+    background-color: #000; /* Fundo preto */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); 
+    color: #fff; /* Texto branco */
+}
+
+/* Títulos */
+.contact h2 {
+    font-size: 2em;
+    color: #fff; /* Título branco */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff; /* Linha branca */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Itens de Contato */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    color: #fff; /* Texto branco */
+}
+
+/* Ícones de Font Awesome */
+.contact-icon {
+    font-size: 1.5em;
+    color: #fff; /* Ícones brancos */
+}
+
+/* Link do Instagram */
+.social-link {
+    text-decoration: none;
+    color: #fff; /* Links brancos */
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ccc; /* Cor cinza ao passar o mouse */
 }
